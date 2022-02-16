@@ -1,0 +1,99 @@
+{
+  "employees": [
+    {
+      "id": 2,
+      "name": "Saurab",
+      "post": "Fullstack Developer",
+      "salary": 7500,
+      "gender": "male",
+      "address": "Pune"
+    },
+    {
+      "id": 3,
+      "name": "Rakesh",
+      "post": "Fullstack Developer",
+      "salary": 4500,
+      "gender": "male",
+      "address": "Pune"
+    },
+    {
+      "id": 4,
+      "name": "Anita",
+      "post": "Fullstack Developer",
+      "salary": 9500,
+      "gender": "female",
+      "address": "Pune"
+    },
+    {
+      "id": 5,
+      "name": "Dipali KUMARI",
+      "post": "Fullstack Developer",
+      "salary": 6500,
+      "gender": "female",
+      "address": "Pune"
+    },
+    {
+      "id": 6,
+      "name": "Adarsh",
+      "post": "Full Stack Developer",
+      "salary": "500000",
+      "gender": "female",
+      "address": "Delhi"
+    },
+    {
+      "name": "Preeti",
+      "post": "Angular",
+      "salary": "76000",
+      "gender": "female",
+      "address": "Delhi",
+      "id": 7
+    },
+    {
+      "name": "kritika",
+      "post": "java",
+      "salary": "45000",
+      "gender": "female",
+      "address": "Vadodara",
+      "id": 8
+    },
+    {
+      "name": "Poonam",
+      "post": "networking",
+      "salary": "890000",
+      "gender": "male",
+      "address": "Kolkata",
+      "id": 9
+    },
+    {
+      "name": "jasmin",
+      "post": "Mean ",
+      "salary": "78000",
+      "gender": "female",
+      "address": "Bangloru",
+      "id": 10
+    },
+    {
+      "name": "Muskan",
+      "post": "Mern",
+      "salary": "39000",
+      "gender": "female",
+      "address": "Rewari",
+      "id": 11
+    }
+  ],
+  "login": [
+    {
+      "id": 1,
+      "user": "admin",
+      "password": "admin@123"
+    },
+    {
+      "id": 2,
+      "user": "hero",
+      "password": "hero@123"
+    }
+  ]
+
+  
+
+}

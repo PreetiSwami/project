@@ -1,0 +1,46 @@
+
+<div>{{msg}}</div>
+<!--string pipe-->
+<div>uppercase:<strong>{{msg | uppercase}}</strong></div>
+<div>lowercase:<strong>{{msg | lowercase}}</strong></div>
+<div>titlecase:<strong>{{msg | titlecase}}</strong></div>
+<div>slice:<strong>{{msg | slice:5}}</strong></div>
+
+
+<!--json pipe-->
+<div>{{employee}}</div>
+<div>json:<strong>{{employee | json}}</strong></div>
+
+<!--number pipe-->
+<div>{{3.768 | number:'1.3-5'}}</div>
+<div>{{3.768 | number:'1.5-6'}}</div>
+
+<!--currency-->
+<div><strong>{{100 | currency}}</strong></div>
+
+<!--date-->
+<div>{{d}}</div>
+<div>date:{{d | date}}</div>
+<div>date:{{d | date:'shortDate'}}</div>
+<div>date:{{d | date:'longDate'}}</div>
+
+<hr>
+
+
+<!--Custom pipe-->
+
+<table class="table table-primary table-hover">
+    <thead>
+        <tr>
+            <th>Id</th><th>Name</th><th>Address</th> <th>Gender</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let std of students">
+            <td>{{std.id}}</td>
+            <td>{{std.name | mygender:std.gender}}</td>
+            <td>{{std.address}}</td>
+            <td>{{std.gender}}</td>
+        </tr>
+    </tbody>
+</table>

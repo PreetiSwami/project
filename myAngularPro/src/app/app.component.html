@@ -1,0 +1,21 @@
+<H2 class="myHead">Hello , Welcome You all in this Angular session</H2>
+<!--<app-data-binding></app-data-binding>
+<app-directive></app-directive>-->
+
+<!--<app-parent></app-parent>-->
+
+
+
+<div class="container">
+    <div class="card border-primary">
+        <div class="card-header border-primary">
+            <app-nav *ngIf="_router.url!='/' && _router.url!='/login'  && _router.url!='/**'" ></app-nav>
+        </div>
+        <div class="card-body border-danger">
+            <router-outlet></router-outlet>
+        </div>
+        <div class="card-footer border-success">
+            <app-footer></app-footer>
+        </div>
+    </div>
+</div>

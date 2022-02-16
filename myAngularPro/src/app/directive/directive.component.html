@@ -1,0 +1,69 @@
+<div class="container">
+
+    <p>directive works!</p>
+
+    <!--ngIf-->
+<h3 *ngIf="isCon">This is my "ngIf" Directive</h3>
+<div *ngIf="isCon;then truepart;else falsepart">Use of ng-template</div>
+
+<!--ng template-->
+<ng-template #truepart>
+    This is true part
+</ng-template>
+<ng-template #falsepart>
+    This is False part
+</ng-template>
+
+
+<!--ng For-->
+<!--<div *ngFor="let c of Cars">{{c}}</div>-->
+<!--<ul *ngFor="let c of Cars">
+    <li>{{c}}</li>
+</ul>-->
+
+<!--ng Switch-->
+<!--<div [ngSwitch]="myCar">
+    <div *ngSwitchCase="'TATA'">You have selected TATA</div>
+    <div *ngSwitchCase="'NANO'">You have selected NANO</div>
+    <div *ngSwitchCase="'BMW'">You have selected BMW</div>
+    <div *ngSwitchCase="'TOYOTA'">You have selected TOYOTA</div>
+    <div *ngSwitchCase="'MARUTI'">You have selected MARUTI</div>
+</div>-->
+
+
+
+
+</div>
+
+<div  [ngSwitch]="myCar">
+
+    <div *ngFor="let c of Cars">
+        <div *ngSwitchCase="c"     >You Have Selected <strong>{{c}}</strong></div>
+        
+    </div>
+    
+    <div *ngSwitchDefault>You Have Selected invalid choice</div>
+
+
+    <hr>
+    
+
+    <div [ngStyle]="myStyle">This is ngStyle</div>
+    <div [ngClass]="myClass">Tis is ngClass</div>
+
+    <hr>
+    <h5 >How to get input in ts file through reference variable</h5> 
+    <form>
+        <label for="">Enter Your Product</label>
+        <input type="text" name="product" #prod> <br>
+        <button type="submit" class="btn btn-primary" (click)="myProducts(prod.value)">send</button>
+    </form>
+
+
+
+
+</div>
+
+
+
+

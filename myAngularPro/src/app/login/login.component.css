@@ -1,0 +1,19 @@
+.loginFrm{
+
+    border: 2px solid blue;
+    box-shadow: 2px 2px 3px gray;
+    border-width: 10px;
+    margin:auto;
+    padding: 20px;
+    width: 350px;
+    margin-top: 5px;
+    border-radius: 4px;
+}
+.input{
+    position: relative;
+    left: 33px;
+}
+.button{
+    position: relative;
+    left: 110px;
+}

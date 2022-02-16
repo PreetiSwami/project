@@ -1,0 +1,54 @@
+<div class="row">
+
+<div class="col-8">    <button type="button" class="btn btn-primary"   routerLink="add"><i class="fa fa-plus" aria-hidden="true"></i>Add</button>
+</div> 
+<div class="col-4"><input type="text" name="search" [(ngModel)]="searchRecord" placeholder="search here"></div>   
+</div>
+
+<table class="table ">
+
+    <thead>
+        <h5>This is table for server</h5>
+        <tr>
+            <th>Id</th><th>Name</th><th>Post</th><th>Salary</th><th>Gender</th><th>Address</th><th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let emp of empData |filter:searchRecord | paginate: { itemsPerPage: 5, currentPage: p }">
+        <td>{{emp.id}}</td>
+        <td>{{emp.name}}</td>
+        <td>{{emp.post}}</td>
+        <td>{{emp.salary}}</td>
+        <td>{{emp.gender}}</td>
+        <td>{{emp.address}}</td>
+        <td>
+
+            <button type="button" class="btn btn-outline-success mx-1" [routerLink]="['/crud','edit',emp.id]"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>Edit</button> |
+            <button type="button" class="btn btn-outline-danger mx-1" (click)="deleteData(emp.id)"><i class="fa fa-trash" aria-hidden="true"></i>Delete</button> |
+            <button type="button" class="btn btn-outline-primary mx-1"  (click)="openModal(template)" ><i class="fa fa-eye" aria-hidden="true"></i></button>
+
+        </td>
+        <ng-template #template>
+            <div class="modal-header">
+              <h4 class="modal-title pull-left">Employee Details</h4>
+              <button type="button" class="btn-close close pull-right" aria-label="Close" (click)="modalRef?.hide()">
+                <span aria-hidden="true" class="visually-hidden">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <table>
+                  <tr> <td>Id:{{emp.id}}</td>  </tr>
+                  <tr> <td>Name:{{emp.name}}</td> </tr>
+                    <tr> <td>Post:{{emp.post}}</td></tr>
+                        <tr><td>Salary:{{emp.salary}}</td></tr>
+                            <tr><td>Address:{{emp.address}}</td></tr>
+               
+              </table>
+              
+            </div>
+          </ng-template>
+
+    </tr>
+    </tbody>
+</table>
+<pagination-controls (pageChange)="p = $event"></pagination-controls>

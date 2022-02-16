@@ -1,0 +1,14 @@
+.txtDanger{
+    color:red;
+}
+
+.txtSuccess{
+    color: green;
+}
+
+.special:hover{
+
+    background-color: rgb(20, 190, 220);
+    text-decoration: underline;
+    font-weight: 700;
+};

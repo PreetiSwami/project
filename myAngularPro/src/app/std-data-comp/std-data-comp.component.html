@@ -1,0 +1,21 @@
+<p>std-data-comp works!</p>
+<h5>this is table</h5>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Id</th><th>Name</th><th>Address</th><th>Grade</th><th>Contact</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let std of studentsArray">
+            <td>{{std.id}}</td>
+            <td>{{std.name}}</td>
+            <td>{{std.address}}</td>
+            <td>{{std.grade}}</td>
+            <td>{{std.contact}}</td>
+            
+
+
+        </tr>
+    </tbody>
+</table>

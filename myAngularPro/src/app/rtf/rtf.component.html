@@ -1,0 +1,51 @@
+<form [formGroup]="stdForm" (ngSubmit)="getData(stdForm.value)">
+    //Name
+    
+    <div class="form-group">
+        <label >Enter Your Full Name</label>
+        <input type="text" name="stdName" class="form-control" formControlName="stdName">
+        <div *ngIf="stdForm.get('stdName').invalid && stdForm.get('stdName').touched">
+        <div class="alert alert-danger" *ngIf="stdForm.get('stdName').errors.required" >
+            Name feild is required
+        
+        </div>
+        <div class="alert alert-danger" *ngIf="stdForm.get('stdName').errors.pattern" >
+            Name feild must be character only
+        
+        </div>
+        </div>
+    </div>
+
+    <br>
+    //Course
+    <div class="form-group">
+        <label>Select Course</label>
+        <select name="myCourse" class="form-control" formControlName="stdCourse">
+            <option value="">select your course</option>
+            <option [value]="c" *ngFor="let c of courses">{{c}}</option>
+        </select>
+        <div *ngIf="stdForm.get('stdCourse').invalid && stdForm.get('stdCourse').touched ">
+            <div class="alert alert-danger">This feild is required
+
+            </div>
+        </div>
+
+    </div>
+
+
+    <br>
+
+    <div class="form-check form-group">
+        <label class="form-check-label">
+            <input type="checkbox" name="stdTerm" class="form-check-input" formControlName="stdTerm">
+            I am agreed to your terms and condition
+        </label>
+        <div *ngIf="stdForm.get('stdTerm').invalid && stdForm.get('stdTerm').touched ">
+            <div class="alert alert-danger">This feild is required
+
+            </div>
+        </div>
+    </div>
+    <br>
+    <button type="submit" class="btn btn-primary" [disabled]="stdForm.invalid">Submit</button>
+</form>

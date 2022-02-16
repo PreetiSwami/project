@@ -1,0 +1,54 @@
+<div class="container">
+    <form #stdData=ngForm (ngSubmit)="getStudentData(stdData.value)">
+        <div class="form-group">
+            <label >Enter Your Full Name</label>
+            <input type="text" name="sname" #refsname="ngModel" class="form-control" pattern="[a-zA-Z]{3,30}"  ngModel required>
+            <!--{{refsname.className}}-->
+            <div *ngIf="refsname.invalid && refsname.touched">
+                <div class="alert alert-danger" *ngIf="refsname.hasError('required')">
+                    This Feild is required
+                </div>
+                <div class="alert alert-danger" *ngIf="refsname.hasError('pattern')">
+                    Name Should be Alphabet only
+                </div>
+            </div>
+        </div>
+     
+<br>
+<br>
+        <div class="form-group">
+
+            <label >Select Your Course:</label>
+        <select name="scourse" class="form-control" #refcourse="ngModel" ngModel required>
+            <option value="">Please select your course</option>
+            <option [value]="c" *ngFor="let c of myCourse" >{{c}}</option>
+            
+        </select>  
+        <div *ngIf="refcourse.invalid && refcourse.touched">
+               <div class="alert alert-danger">course should be selected</div>
+        </div> 
+        <br>
+        <br>
+            
+        </div>
+
+        <div class="form-check">
+            <label class="form-check-label">I agree Your Term and Condition 
+                <input type="checkbox" name="term" #refterm="ngModel" class="form-check-input" ngModel required>
+                <div *ngIf="refterm.invalid && refterm.touched">
+
+                    <div class="alert alert-danger">
+                        This field is required
+                    </div>
+                </div>
+            </label>
+        </div>
+        <br>
+        <br>
+       
+        <div>
+            <button type="submit" class="btn btn-primary"   [disabled]="stdData.invalid">submit</button>
+        </div>
+        
+    </form>
+</div>

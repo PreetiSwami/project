@@ -1,0 +1,38 @@
+<p>edit works!</p>
+
+<form #empData="ngForm" (ngSubmit)="sendData(empData.value)">
+    <div class="form-group">
+        <label >Enter Your Name</label>
+        <input type="text" name="name" class="form-control" [ngModel]="empObj?.name">
+    </div>
+    <br>
+    <br>
+    <div class="form-group">
+        <label for="">Enter Your Post</label>
+        <input type="text" name="post" class="form-control" [ngModel]="empObj?.post">
+    </div>
+    <br>
+    <br>
+    <div class="form-group">
+        <label >Enter Your Salary</label>
+        <input type="text" name="salary" class="form-control" [ngModel]="empObj?.salary">
+    </div>
+    <br>
+    <br>
+    <div class="form-check">
+        <label class="form-check-label">Enter Your Gender</label>
+        <input type="radio" name="gender"  [ngModel]="empObj?.gender" value="male">Male
+        <input type="radio" name="gender"  [ngModel]="empObj?.gender" value="female">Female
+    </div>
+    <br>
+    <br>
+    <div class="form-group">
+        <label for="">Enter Your Address</label>
+        <input type="text" name="address" class="form-control" [ngModel]="empObj?.address">
+    </div>
+
+    <button type="submit" class="btn btn-primary">submit</button>
+</form>
+
+
+

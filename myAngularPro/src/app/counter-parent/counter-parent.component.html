@@ -1,0 +1,16 @@
+<p>counter-parent works!</p>
+
+<button type="button" class="btn btn-primary btn-sm mx-1 "  (click)="increament()" >Increment</button>
+<button type="button" class="btn btn-primary btn-sm mx-1"  (click)="decrement()"  >Decrement</button>
+<h4>{{massage}}</h4>
+
+
+
+<app-counter></app-counter>
+
+<h2 appMyDirectory>Change my color</h2>
+
+<input type="radio" name="color" (click)="colorChange('green')" value="green" >Green
+<input type="radio" name="color" (click)="colorChange('blue')" value="blue" >Blue
+<input type="radio" name="color" (click)="colorChange('red')"  value="red" >red
+<input type="radio" name="color" (click)="colorChange('pink')" value="pink" >Pink
